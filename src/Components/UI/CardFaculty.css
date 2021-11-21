@@ -1,0 +1,34 @@
+.f_card {
+    width: 400px;
+    box-shadow: 0 0 10px #ccc;
+    background-color: #efeff6 !important;
+}
+.circle {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #10277c;
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    z-index: 20;
+    height: 80px;
+    width: 80px;
+    margin: auto;
+}
+
+.header {
+    font-size: 14px;
+    line-height: 0.75rem;
+}
+
+.para {
+    font-size: 13px;
+    line-height: 0.5rem;
+}
+
+.para_small {
+    font-size: 10px;
+}

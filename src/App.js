@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import './App.css';
+import DashboardNav from './Components/Dashboard/DashboardNav';
+import LandingPage from './Components/LandingPage';
+
+
 
 function App() {
+
+  const auth = useSelector((state) => state.auth.auth)
+
+  const [isLoggedIn, setIsloggedIn] = useState(false)
+  const [showModalLogin, setShowModalLogin] = useState(false)
+
+  const showModal = () => {
+    setShowModalLogin(true)
+  }
+  const hideModal = () => {
+    setShowModalLogin(false)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+
+      <Switch>
+        <Route path="/" exact>
+          <LandingPage showModal={showModal} hideModal={hideModal} showModalLogin={showModalLogin} isLoggedIn={isLoggedIn} setIsloggedIn={setIsloggedIn} />
+        </Route>
+        <Route path="/dashboard">
+          {auth && <DashboardNav />}
+        </Route>
+      </Switch>
+
+    </Router>
+
   );
 }
 

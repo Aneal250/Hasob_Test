@@ -1,0 +1,18 @@
+button {
+    background-color: #10277c;
+    border: none;
+    padding: 0.5rem  2rem;
+    border-radius: 10px !important;
+    color: white;
+    margin: 0 20px 0 0 !important;
+}
+
+.login_button {
+    background-color: #10277c;
+    border: none;
+    padding: 0.75rem  2rem;
+    border-radius: 10px !important;
+    color: white;
+    margin: 0 20px 0 0 !important;
+    width: 100%;
+}

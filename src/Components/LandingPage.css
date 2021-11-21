@@ -1,0 +1,39 @@
+.landing-container {
+    height: 92vh;
+    overflow: hidden;
+}
+
+.landing-row {
+    display: flex;
+    
+}
+
+.left{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 0 0 0 5rem;  
+    z-index: 20;
+}
+
+.hero_img {
+    
+    clip-path: polygon(15% 0, 100% 0%, 100% 100%, 43% 100%);
+    margin-left: -200px;
+}
+
+
+h1 {
+    color: #10277c;
+    font-size: 3rem;   
+}
+p {
+    color: rgb(87, 87, 87);
+}
+.button-row {
+    display: flex;
+    justify-content: center;
+}
+
